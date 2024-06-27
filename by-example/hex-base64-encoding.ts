@@ -15,11 +15,11 @@ import * as base64 from "jsr:@std/encoding/base64";
 import * as hex from "jsr:@std/encoding/hex";
 
 // We can easily encode a string or an array buffer into base64 using the base64.encode method.
-const base64Encoded = base64.encode("somestringtoencode");
-console.log(base64.encode(new Uint8Array([1, 32, 67, 120, 19])));
+const base64Encoded = base64.encodeBase64("somestringtoencode");
+console.log(base64.encodeBase64(new Uint8Array([1, 32, 67, 120, 19])));
 
 // We can then decode base64 into a byte array using the decode method.
-const base64Decoded = base64.decode(base64Encoded);
+const base64Decoded = base64.decodeBase64(base64Encoded);
 
 // If we want to get the value as a string we can use the built-in TextDecoder.
 // We will use these a lot so we can store them in variables to reuse them.
